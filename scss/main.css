@@ -17,4 +17,15 @@ body {
 ol, ul {
   list-style: none;
 }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: green;
+  z-index: 100;
+}
 /*# sourceMappingURL=main.css.map */
