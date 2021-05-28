@@ -1,0 +1,66 @@
+@import '../abstracts/_mixins';
+
+// Small screen styles
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+
+  h1 {
+    font-size: 2.441rem;
+    padding: 1rem 0;
+  }
+
+  h2 {
+    padding-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: initial;
+  }
+
+  &__left {
+    padding-bottom: 1rem;
+    flex: 1;
+  }
+
+  &__right {
+    padding-bottom: 1rem;
+    flex: 1;
+  }
+}
+
+// Medium screens styles
+@include medium-screens {
+  .hero {
+    flex-direction: row;
+    padding: 2rem 4rem;
+    text-align: left;
+    height: calc(100vh - 70px);
+
+    h1 {
+      font-size: 3.052rem;
+    }
+
+    h2 {
+      padding-top: .5rem;
+      
+    }
+
+    &__left {
+      padding-right: 1rem;
+    }
+  }
+}
+
+@include large-screens {
+  .hero {
+    h1 {
+      font-size: 3.815rem;
+    }
+  
+    h2 {
+      font-size: 1.56rem;   
+    }
+  } 
+}
