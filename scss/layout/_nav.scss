@@ -1,4 +1,5 @@
 @import '../themes/_color-themes';
+@import '../abstracts/_mixins';
 
 header {
   padding: 1.25rem 2rem;
@@ -83,7 +84,7 @@ header {
 
 
 // Large screen styles
-@media screen and (min-width: 768px) {
+@include large-screens {
   header {
     display: flex;
     justify-content: space-between;

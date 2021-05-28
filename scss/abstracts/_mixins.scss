@@ -1,0 +1,18 @@
+//Media queries
+@mixin small-screens {
+  @media (max-width: 640px) {
+    @content
+  }
+};
+
+@mixin medium-screens {
+  @media (min-width: 641px) {
+    @content
+  }
+};
+
+@mixin large-screens {
+  @media (min-width: 1008px) {
+    @content
+  }
+}
