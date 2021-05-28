@@ -1,0 +1,122 @@
+@import '../themes/_color-themes';
+
+header {
+  padding: 2rem;
+  @include themify($themes) {
+    background-color: themed('primary-color');
+  }
+  color: #fff;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin: initial;
+  display: inline-block;
+}
+
+.theme-selector {
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.circle {
+  margin: .25rem;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  overflow: hidden;
+
+  &--purple {
+    background-color: $purple-primary;
+  }
+
+  &--orange {
+    background-color: $orange-primary;
+  }
+
+  &--teal {
+    background-color: $teal-primary;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  top: 2.25rem;
+  right: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.nav {
+  &__items {
+    display: none;
+    transition: all .25s ease;
+  }
+  
+  &__item {
+    text-align: center;
+    margin: 1rem auto;
+
+    a {
+      color: #fff;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.active {
+  display: block;
+}
+
+// Used to transition b/t display:none and display:block
+.hidden {
+  opacity: 0;
+}
+
+
+// Large screen styles
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    padding: 2.75rem;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    background-color: orange;
+  }
+
+  .nav {
+    display: flex;
+
+    &__items {
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    &__item {
+      font-size: 1rem;
+      margin: 0;
+      margin-left: 2rem;
+      width: 60%;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
