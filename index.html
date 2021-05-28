@@ -8,7 +8,51 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./scss/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body class="theme--purple">
+  <header>
+    <div class="logo-block">
+      <h1 class="logo">SM</h1>
+      <div class="theme-selector">
+        <div class="circle circle--purple"></div>
+        <div class="circle circle--orange"></div>
+        <div class="circle circle--teal"></div>
+      </div>
+    </div>
+    
+    <nav class="nav">
+      <ul id="js-nav" class="nav__items" >
+        <li class="nav__item">
+          <a href="#">About</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Projects</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Design</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Posts</a>
+        </li>
+        <li class="nav__item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <span class="hamburger" id="js-hamburger">
+      <i class="fa fa-bars"></i>
+    </span>
+  </header>
+
+  <script>
+    const nav = document.getElementById('js-nav');
+    const toggleNav = document.getElementById('js-hamburger');
+
+    toggleNav.addEventListener('click', function () {
+      nav.classList.toggle('active');
+    })
+  </script>
+  
 </body>
 </html>
