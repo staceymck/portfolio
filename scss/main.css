@@ -31,6 +31,7 @@ body {
 header {
   padding: 2rem;
   color: #fff;
+  text-transform: uppercase;
 }
 
 .theme--purple header {
@@ -174,5 +175,29 @@ header {
   .hamburger {
     display: none;
   }
+}
+
+.btn--circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  margin: .35rem;
+}
+
+.btn--circle:hover {
+  border: 2.5px solid #fff;
+}
+
+.btn--purple {
+  background-color: #6525CC;
+}
+
+.btn--orange {
+  background-color: #FF7033;
+}
+
+.btn--teal {
+  background-color: #1898A0;
 }
 /*# sourceMappingURL=main.css.map */
