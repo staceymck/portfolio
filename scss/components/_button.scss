@@ -1,0 +1,25 @@
+.btn {
+  &--circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    margin: .35rem;
+
+    &:hover {
+      border: 2.5px solid #fff;
+    }
+  }
+
+  &--purple {
+    background-color: $purple-primary;
+  }
+
+  &--orange {
+    background-color: $orange-primary;
+  }
+
+  &--teal {
+    background-color: $teal-primary;
+  }
+}
