@@ -16,6 +16,12 @@ body {
 
 ol, ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -23,9 +29,150 @@ body {
 }
 
 header {
-  position: fixed;
-  width: 100%;
-  background: green;
-  z-index: 100;
+  padding: 2rem;
+  color: #fff;
+}
+
+.theme--purple header {
+  background-color: #6525CC;
+}
+
+.theme--orange header {
+  background-color: #FF7033;
+}
+
+.theme--teal header {
+  background-color: #1898A0;
+}
+
+.logo-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  margin: initial;
+  display: inline-block;
+}
+
+.theme-selector {
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+.circle {
+  margin: .25rem;
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  overflow: hidden;
+}
+
+.circle--purple {
+  background-color: #6525CC;
+}
+
+.circle--orange {
+  background-color: #FF7033;
+}
+
+.circle--teal {
+  background-color: #1898A0;
+}
+
+.hamburger {
+  position: absolute;
+  top: 2.25rem;
+  right: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.nav__items {
+  display: none;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.nav__item {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.nav__item a {
+  color: #fff;
+}
+
+.nav__item:hover {
+  text-decoration: underline;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2.75rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 70px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: orange;
+  }
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .nav__item {
+    font-size: 1rem;
+    margin: 0;
+    margin-left: 2rem;
+    width: 60%;
+  }
+  .hamburger {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
