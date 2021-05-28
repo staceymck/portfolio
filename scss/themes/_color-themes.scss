@@ -1,19 +1,19 @@
 // sass map
 $themes: (
   purple: (
-    primary-color: #6525CC,
-    primary-color-dark: #391573,
-    secondary-color: #B186F9,
+    primary-color: $purple-primary,
+    primary-color-dark: $purple-dark,
+    secondary-color: $purple-light,
   ),
   orange: (
-    primary-color: #FF7033,
-    primary-color-dark: #C25424,
-    secondary-color: #FFAD33
+    primary-color: $orange-primary,
+    primary-color-dark: $orange-dark,
+    secondary-color: $orange-light
   ),
   teal: (
-    primary-color: #1898A0,
-    primary-color-dark: #0F6B71,
-    secondary-color: #30E2CD
+    primary-color: $teal-primary,
+    primary-color-dark: $teal-dark,
+    secondary-color: $teal-light
   )
 );
 
