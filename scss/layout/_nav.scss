@@ -13,7 +13,6 @@ header {
 }
 
 .logo {
-  margin: initial;
   display: inline-block;
 }
 
@@ -24,29 +23,6 @@ header {
   overflow: hidden;
   padding: 0 1rem;
 }
-
-// .circle {
-//   margin: .25rem;
-//   width: 20px;
-//   height: 20px;
-//   display: flex;
-//   flex-wrap: wrap;
-//   border-radius: 50%;
-//   border: 1.5px solid #fff;
-//   overflow: hidden;
-
-//   &--purple {
-//     background-color: $purple-primary;
-//   }
-
-//   &--orange {
-//     background-color: $orange-primary;
-//   }
-
-//   &--teal {
-//     background-color: $teal-primary;
-//   }
-// }
 
 .hamburger {
   position: absolute;

@@ -1,3 +1,5 @@
+@import '../themes/_color-themes';
+
 html {
   box-sizing: border-box;
   font-size: 16;
@@ -14,11 +16,25 @@ body {
 
 ol, ul {
   list-style: none;
+}
+
+ol, ul, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+
+h1 {
+  text-transform: uppercase;
 }
 
 a {
   color: $text-color-primary;
   text-decoration: none;
+}
+
+.accent-color {
+  @include themify($themes) {
+    color: themed('primary-color');
+  }
 }
