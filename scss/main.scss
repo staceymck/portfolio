@@ -3,6 +3,7 @@
 // Config and helpers
 @import
   'abstracts/variables',
+  'abstracts/functions',
   'abstracts/mixins';
 
 // Base
@@ -15,3 +16,7 @@
   'layout/nav';
 
 // Components
+
+//Themes
+@import
+  'themes/color-themes';
