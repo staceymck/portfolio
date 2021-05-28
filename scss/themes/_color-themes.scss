@@ -1,0 +1,36 @@
+// sass map
+$themes: (
+  purple: (
+    primary-color: #6525CC,
+    primary-color-dark: #391573,
+    secondary-color: #B186F9,
+  ),
+  orange: (
+    primary-color: #FF7033,
+    primary-color-dark: #C25424,
+    secondary-color: #FFAD33
+  ),
+  teal: (
+    primary-color: #1898A0,
+    primary-color-dark: #0F6B71,
+    secondary-color: #30E2CD
+  )
+);
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
