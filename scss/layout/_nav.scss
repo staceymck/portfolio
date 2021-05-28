@@ -1,11 +1,9 @@
 @import '../themes/_color-themes';
 
 header {
-  padding: 2rem;
-  @include themify($themes) {
-    background-color: themed('primary-color');
-  }
-  color: #fff;
+  padding: 1.25rem 2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid $gray-light;
 }
 
 .logo-block {
@@ -26,32 +24,32 @@ header {
   padding: 0 1rem;
 }
 
-.circle {
-  margin: .25rem;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 50%;
-  border: 1.5px solid #fff;
-  overflow: hidden;
+// .circle {
+//   margin: .25rem;
+//   width: 20px;
+//   height: 20px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   border-radius: 50%;
+//   border: 1.5px solid #fff;
+//   overflow: hidden;
 
-  &--purple {
-    background-color: $purple-primary;
-  }
+//   &--purple {
+//     background-color: $purple-primary;
+//   }
 
-  &--orange {
-    background-color: $orange-primary;
-  }
+//   &--orange {
+//     background-color: $orange-primary;
+//   }
 
-  &--teal {
-    background-color: $teal-primary;
-  }
-}
+//   &--teal {
+//     background-color: $teal-primary;
+//   }
+// }
 
 .hamburger {
   position: absolute;
-  top: 2.25rem;
+  top: 1.25rem;
   right: 2rem;
   cursor: pointer;
   font-size: 2rem;
@@ -60,19 +58,21 @@ header {
 .nav {
   &__items {
     display: none;
-    transition: all .25s ease;
   }
   
   &__item {
     text-align: center;
     margin: 1rem auto;
 
-    a {
-      color: #fff;
-    }
-
-    &:hover {
-      text-decoration: underline;
+    a:hover {
+      @include themify($themes) {
+        -webkit-text-decoration: themed('primary-color') solid underline;
+        text-decoration: themed('primary-color') solid underline;
+        -webkit-text-underline-position: under;
+        text-underline-position: under;
+        -webkit-text-underline-position: 10%;
+        text-decoration-thickness: 2px;
+      }
     }
   }
 }
@@ -81,38 +81,24 @@ header {
   display: block;
 }
 
-// Used to transition b/t display:none and display:block
-.hidden {
-  opacity: 0;
-}
-
 
 // Large screen styles
 @media screen and (min-width: 768px) {
   header {
     display: flex;
-    padding: 2.75rem;
     justify-content: space-between;
-    height: 70px;
     align-items: center;
-    background-color: orange;
   }
 
   .nav {
-    display: flex;
-
     &__items {
       display: flex;
-      margin-right: 30px;
       flex-direction: row;
       justify-content: flex-end;
     }
 
     &__item {
-      font-size: 1rem;
-      margin: 0;
-      margin-left: 2rem;
-      width: 60%;
+      margin: 0 0 0 2rem;
     }
   }
 
