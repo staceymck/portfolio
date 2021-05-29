@@ -1,0 +1,26 @@
+@import '../abstracts/_mixins';
+
+.about {
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 5rem;
+  color: $gray-light;
+
+  h1 {
+    padding: 3rem 1rem 1rem 1rem; 
+    font-size: 2.44rem;
+    text-align: center;
+  }
+}
+
+@include medium-screens {
+  .about {
+    width: 70%;
+  }
+}
+
+@include large-screens {
+  .about {
+    width: 60%;
+  } 
+}
