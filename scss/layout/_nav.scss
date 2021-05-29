@@ -2,9 +2,13 @@
 @import '../abstracts/_mixins';
 
 header {
-  padding: 1.25rem 2rem;
-  text-transform: uppercase;
   border-bottom: 1px solid $gray-light;
+}
+
+.nav-container {
+  padding: 1.25rem 2rem;
+  height: 70px;
+  text-transform: uppercase;
 }
 
 .logo-block {
@@ -61,10 +65,12 @@ header {
 
 // Large screen styles
 @include large-screens {
-  header {
+  .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: $max-width;
+    margin: 0 auto;
   }
 
   .nav {
