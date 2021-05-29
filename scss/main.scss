@@ -13,11 +13,16 @@
 
 // Layout
 @import
-  'layout/nav';
+  'layout/content-section',
+  'layout/wave-bg-container',
+  'layout/nav',
+  'layout/hero';
 
 // Components
 @import
-  'components/button';
+  'components/button',
+  'components/wave-divider',
+  'components/about-section';
 
 //Themes
 @import
