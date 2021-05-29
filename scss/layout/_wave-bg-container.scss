@@ -1,0 +1,8 @@
+@import '../themes/_color-themes';
+
+.wave-bg-container {
+  @include themify($themes) {
+    background-color: themed('primary-color');
+  }
+  position: relative;
+}
