@@ -1,12 +1,13 @@
 @import '../abstracts/_mixins';
 
 // Small screen styles
+
 .hero {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
 
   h1 {
     font-size: 2.441rem;
@@ -36,7 +37,7 @@
     flex-direction: row;
     padding: 2rem 4rem;
     text-align: left;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 69px);
 
     h1 {
       font-size: 3.052rem;
