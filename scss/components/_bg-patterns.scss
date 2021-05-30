@@ -1,0 +1,73 @@
+@import '../themes/_color-themes';
+
+.bg-pattern {
+  position: absolute;
+  width: 25%;
+
+  &--left {
+    left: -20%;
+    top: 50%;
+    transform: translate(20%, -50%);
+    
+    .cls-1 {
+      fill:#fff;
+    }
+    .cls-2 {
+      @include themify($themes) {
+        fill: themed('secondary-color')
+      }
+    }
+    .cls-3, .cls-4, .cls-5 {
+      fill:none;
+      stroke-miterlimit:10;
+    }
+    .cls-3, .cls-5 {
+      stroke:#fff;
+    }
+    .cls-3 {
+      stroke-width:2px;
+    }
+    .cls-4 {
+      @include themify($themes) {
+        stroke: themed('secondary-color')
+      }
+      stroke-width:4px;
+    }
+    .cls-5 {
+      stroke-width:6px;
+    }
+  }
+
+  &--right {
+    right: -12%;
+    top: 40%;
+    transform: translate(12%, -40%);
+  
+    .cls-1 {
+      @include themify($themes) {
+        fill: themed('secondary-color')
+      }
+    }
+    
+    .cls-2, .cls-4 {
+      fill:none;
+      stroke-miterlimit:10;
+    }
+    
+    .cls-2 {
+      stroke:#fff;
+      stroke-width:2px;
+    }
+    
+    .cls-3 {
+      fill:#fff;
+    }
+    
+    .cls-4 {
+      @include themify($themes) {
+        stroke: themed('secondary-color')
+      }
+      stroke-width:6px;
+    }
+  }
+}
