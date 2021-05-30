@@ -3,11 +3,15 @@
 
 header {
   border-bottom: 1px solid $gray-light;
+
+  ul {
+    line-height: initial;
+  }
 }
 
 .nav-container {
   padding: 1.25rem 2rem;
-  height: 70px;
+  min-height: 70px;
   text-transform: uppercase;
 }
 
