@@ -1,13 +1,17 @@
+@import '../themes/_color-themes';
+
 .btn {
+  cursor: pointer;
+  
   &--circle {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     border: 1.5px solid #fff;
     margin: .35rem;
 
     &:hover {
-      border: 2.5px solid #fff;
+      border: 3px solid #fff;
     }
   }
 
@@ -21,5 +25,23 @@
 
   &--teal {
     background-color: $teal-primary;
+  }
+
+  &--primary {
+    border-radius: 8px;
+    padding: .4rem 2rem;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s;
+    @include themify($themes) {
+      background-color: themed('primary-color');
+    }
+    
+
+    &:hover {
+      @include themify($themes) {
+        background-color: themed('primary-color-dark');
+      }
+    }
   }
 }
