@@ -1,20 +1,36 @@
 @import '../abstracts/_mixins';
+@import '../themes/_color-themes';
 
 .about {
   margin: 0 auto;
   width: 90%;
   padding-bottom: 5rem;
   color: $gray-light;
-}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-@include medium-screens {
-  .about {
-    width: 70%;
+  &__left {
+    flex: 1;
+    display: none;
+  }
+
+  &__right {
+    flex: 1;
+    padding: 1rem;
   }
 }
 
 @include large-screens {
   .about {
-    width: 60%;
-  } 
+    &__left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .pattern {
+        max-width: 70%;
+      }
+    }
+  }
 }
