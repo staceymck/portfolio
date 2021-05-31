@@ -1,0 +1,27 @@
+@import '../themes/_color-themes';
+
+.slant-divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  line-height: 0;
+
+  &--bottom {
+    transform: rotate(180deg);
+      bottom: 0;
+      top: initial;
+  }
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(110% + 5px);
+    height: 50px;
+    transform: rotateY(180deg);
+  }
+
+  .shape-fill {
+    fill: #fff;
+  }
+}

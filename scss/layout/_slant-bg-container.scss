@@ -1,12 +1,15 @@
 @import '../themes/_color-themes';
 @import '../abstracts/_mixins';
 
-.wave-bg-container {
+.slant-bg-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   @include themify($themes) {
     background-color: themed('primary-color');
   }
-  position: relative;
-  overflow: hidden;
 
   .bg-pattern {
     display: none;
@@ -14,7 +17,7 @@
 }
 
 @include medium-screens {
-  .wave-bg-container {
+  .slant-bg-container {
     .bg-pattern {
       display: block;
     }
