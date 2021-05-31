@@ -1,4 +1,9 @@
 section {
   max-width: $max-width;
   margin: 0 auto;
+  padding: 6rem 0;
+}
+
+section#home {
+  padding: initial;
 }
