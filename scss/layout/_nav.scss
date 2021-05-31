@@ -43,6 +43,7 @@ header {
 .nav {
   &__items {
     display: none;
+    padding-top: 1rem;
   }
   
   &__item {
@@ -82,6 +83,7 @@ header {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
+      padding-top: initial;
     }
 
     &__item {
