@@ -6,6 +6,7 @@
   left: 0;
   width: 110%;
   line-height: 0;
+  overflow: hidden;
 
   &--bottom {
     transform: rotate(180deg);
@@ -16,7 +17,7 @@
   svg {
     position: relative;
     display: block;
-    width: calc(110% + 5px);
+    width: calc(120% + 5px);
     height: 50px;
     transform: rotateY(180deg);
   }
