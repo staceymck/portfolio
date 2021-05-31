@@ -1,0 +1,67 @@
+@import '../abstracts/_mixins';
+
+.card {
+  display: flex;
+  margin: 2rem 2rem 3rem 2rem;
+  padding: 2rem 1rem;
+
+  h2 {
+    font-size: 1.953rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.563rem;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-weight: 600;
+    padding-bottom: .5rem;
+  }
+
+  ul {
+    list-style-type: circle;
+    padding-left: 1.25rem;
+  }
+
+  &--large {
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 4px 5px 10px #dadada;
+    background-color: rgba(236, 235, 235, 0.5);
+
+    .card__img {
+      width: 100%;
+      border: 1px solid $gray-light;
+      border-radius: 10px;
+    }
+
+    .card__text {
+      margin: 0 auto;
+      padding-left: .5rem;
+    }
+  }
+}
+
+@include medium-screens {
+  .card {
+    padding: 2.5rem 2rem;
+
+    &--large {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@include large-screens {
+  .card {
+    padding: 3rem 3rem;
+
+    &--large {
+      max-width: 70%;
+    }
+  }
+}
