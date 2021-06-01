@@ -33,6 +33,13 @@ a {
   text-decoration: none;
 }
 
+.center-h {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
 // Common widths for sections
 section {
   margin: 0 auto;
