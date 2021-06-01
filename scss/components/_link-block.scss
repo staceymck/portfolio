@@ -3,19 +3,18 @@
 .link-block {
   padding: 1.5rem 0;
   font-weight: 600;
+}
 
-  .link-block__item, .link-block__divider {
-    @include themify($themes) {
-      color: themed('primary-color');
-    }
+.link-block__item, .link-block__divider {
+  @include themify($themes) {
+    color: themed('primary-color');
   }
+}
 
-  .link-block__item:hover {
-    text-decoration: underline;
-  }
+.link-block__item:hover {
+  text-decoration: underline;
+}
 
-  .link-block__divider {
-    padding: 0rem .25rem;
-  }
-
+.link-block__divider {
+  padding: 0rem .25rem;
 }
