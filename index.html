@@ -14,7 +14,9 @@
   <header>
     <div class="nav-container wide">
       <div class="logo-block">
-        <img class="logo" src="assets/sm-site-img.png" alt="Letters S M" />
+        <a href="#home">
+          <img class="logo" src="assets/sm-site-img.png" alt="Letters S M"/>
+        </a>
         <div class="theme-selector">
           <button class="btn btn--circle btn--purple"></button>
           <button class="btn btn--circle btn--orange"></button>
@@ -25,16 +27,16 @@
       <nav class="nav">
         <ul id="js-nav" class="nav__items" >
           <li class="nav__item">
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li class="nav__item">
-            <a href="#">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li class="nav__item">
-            <a href="#">Posts</a>
+            <a href="#posts">Posts</a>
           </li>
           <li class="nav__item">
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -217,6 +219,8 @@
     toggleNav.addEventListener('click', function() {
       nav.classList.toggle('active');
     })
+
+    //hide menu after link clicked
   </script>
   
 </body>
