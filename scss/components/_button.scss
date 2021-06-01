@@ -2,6 +2,10 @@
 
 .btn {
   cursor: pointer;
+  border-radius: 8px;
+  padding: .4rem 2rem;
+  font-weight: 500;
+  transition: 0.3s;
   
   &--circle {
     width: 20px;
@@ -9,6 +13,7 @@
     border-radius: 50%;
     border: 1.5px solid #fff;
     margin: .35rem;
+    padding: initial;
 
     &:hover {
       border: 3px solid #fff;
@@ -28,20 +33,32 @@
   }
 
   &--primary {
-    border-radius: 8px;
-    padding: .4rem 2rem;
-    font-weight: 500;
     color: #fff;
-    transition: 0.3s;
     @include themify($themes) {
       background-color: themed('primary-color');
     }
     
-
     &:hover {
       @include themify($themes) {
         background-color: themed('primary-color-dark');
       }
     }
+  }
+
+  &--secondary {
+    @include themify($themes) {
+      border: 2px solid themed('primary-color');
+    }
+    
+    &:hover {
+      @include themify($themes) {
+        color: themed('primary-color');
+      }
+    }
+  }
+
+  &--wide {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
