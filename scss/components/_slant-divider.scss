@@ -3,8 +3,7 @@
 .slant-divider {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 110%;
+  width: 105%;
   line-height: 0;
   overflow: hidden;
 
@@ -17,7 +16,7 @@
   svg {
     position: relative;
     display: block;
-    width: calc(120% + 5px);
+    width: calc(120% + 1.3px);
     height: 50px;
     transform: rotateY(180deg);
   }
