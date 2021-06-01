@@ -1,0 +1,28 @@
+@import '../themes/_color-themes';
+@import '../abstracts/_mixins';
+
+footer {
+  padding: 3rem 1rem;
+  text-align: center;
+  
+  @include themify($themes) {
+    background-color: themed('primary-color');
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .link-block__item, .link-block__divider, h1, p {
+    @include themify($themes) {
+      color: set-text-color(themed('primary-color'));
+    }
+  }
+}
+
+@include medium-screens {
+  p, .link-block  {
+    width: 60%;
+    margin: 0 auto;
+  }
+}  
