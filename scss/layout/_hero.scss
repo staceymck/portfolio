@@ -7,13 +7,14 @@
   align-items: center;
   text-align: center;
   padding: 3rem 1rem;
-  min-height: calc(100vh - 69px);
+  min-height: calc(100vh);
 
   h1 {
     padding: 1rem 0;
   }
 
   h2 {
+    max-width: $width-text;
     padding-top: 1rem;
     font-size: 1.25rem;
     font-weight: initial;
@@ -25,6 +26,9 @@
 
   &__right {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -39,14 +43,6 @@
 
     h2 {
       padding-top: .5rem;
-    }
-
-    &__right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      // make sure SVG size fills container
     }
   }
 }
