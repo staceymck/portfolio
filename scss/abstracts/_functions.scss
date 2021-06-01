@@ -1,0 +1,8 @@
+//Set text color relative to background
+@function set-text-color($color) {
+  @if(lightness($color) > 70) {
+    @return #1F1E1E;
+  } @else {
+    @return #fff;
+  }
+}
