@@ -33,8 +33,26 @@ a {
   text-decoration: none;
 }
 
-.accent-color {
-  @include themify($themes) {
-    color: themed('primary-color');
-  }
+// Common widths for sections
+section {
+  margin: 0 auto;
+  padding: 6rem 1rem; 
 }
+
+section#home {
+  padding: initial;
+}
+
+.width-main {
+  max-width: $width-main;
+}
+
+.width-text {
+  max-width: $width-text;
+}
+
+// .accent-color {
+//   @include themify($themes) {
+//     color: themed('primary-color');
+//   }
+// }
