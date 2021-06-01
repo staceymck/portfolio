@@ -2,7 +2,12 @@
 @import '../abstracts/_mixins';
 
 header {
+  top: 0;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
   border-bottom: 1px solid $gray-light;
+  background-color: #fff;
 
   ul {
     line-height: initial;
