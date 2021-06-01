@@ -15,10 +15,6 @@ body {
   padding: 0;
 }
 
-main {
-  margin-top: 70px; //offset fixed nav menu;
-}
-
 ol, ul {
   list-style: none;
 }
@@ -52,6 +48,7 @@ section {
 
 section#home {
   padding: initial;
+  margin-top: 70px;
 }
 
 .width-main {
