@@ -2,9 +2,6 @@
 @import '../themes/_color-themes';
 
 .about {
-  margin: 0 auto;
-  width: 90%;
-  padding-bottom: 5rem;
   color: $gray-light;
   display: flex;
   align-items: center;
@@ -18,12 +15,15 @@
   &__right {
     flex: 1;
     padding: 1rem;
+    max-width: $width-text;
   }
 }
 
 @include large-screens {
   .about {
+
     &__right {
+      max-width: initial;
       h1 {
         text-align: left;
       }

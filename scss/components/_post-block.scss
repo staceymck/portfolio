@@ -1,8 +1,15 @@
+@import '../abstracts/_mixins';
 .post-block {
-  padding: 1rem;
+  padding: 1rem 0rem;
   margin-bottom: 1rem;
 
   p {
     padding-bottom: .75rem;
   }
+}
+
+@include medium-screens {
+  .post-block {
+    padding: 1rem;
+  };
 }
