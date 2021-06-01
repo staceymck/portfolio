@@ -21,8 +21,10 @@ footer {
 }
 
 @include medium-screens {
-  p, .link-block  {
-    width: 60%;
-    margin: 0 auto;
-  }
+  footer {
+    p, .link-block  {
+      width: 25%;
+      margin: 0 auto;
+    }
+  } 
 }  
