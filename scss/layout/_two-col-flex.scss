@@ -1,8 +1,7 @@
 @import '../abstracts/_mixins';
 @import '../themes/_color-themes';
 
-.about {
-  color: $gray-light;
+.two-col-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,11 +18,18 @@
   }
 }
 
-@include large-screens {
-  .about {
+//adjust text color based on background
+.slant-bg-container > .two-col-flex {
+  @include themify($themes) {
+    color: set-text-color(themed('primary-color'));
+  }
+}
 
+@include large-screens {
+  .two-col-flex {
     &__right {
       max-width: initial;
+      
       h1 {
         text-align: left;
       }
