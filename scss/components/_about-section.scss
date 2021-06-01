@@ -23,6 +23,12 @@
 
 @include large-screens {
   .about {
+    &__right {
+      h1 {
+        text-align: left;
+      }
+    }
+    
     &__left {
       display: flex;
       align-items: center;
