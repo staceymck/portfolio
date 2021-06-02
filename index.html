@@ -18,9 +18,9 @@
           <img class="logo js-nav-link" src="assets/sm-site-img.png" alt="Letters S M"/>
         </a>
         <div class="theme-selector">
-          <button aria-label="purple" class="btn btn--circle btn--purple js-theme-btn"></button>
-          <button aria-label="orange" class="btn btn--circle btn--orange js-theme-btn"></button>
-          <button aria-label="teal" class="btn btn--circle btn--teal js-theme-btn"></button>
+          <button aria-label="purple" id="js-purple" class="btn btn--circle btn--purple js-theme-btn"></button>
+          <button aria-label="orange" id="js-orange"class="btn btn--circle btn--orange js-theme-btn"></button>
+          <button aria-label="teal" id="js-teal" class="btn btn--circle btn--teal js-theme-btn"></button>
         </div>
       </div>
 
@@ -247,9 +247,10 @@
     const navBar = document.querySelector('header');
     const hamburger = document.getElementById('js-hamburger');
 
-    // const applyTheme = (target) => {
-    //   console.log(target)
-    // }
+    const applyTheme = (target) => {
+      const color = target.id.split("-")[1];
+      document.body.className=`theme--${color}`;
+    }
 
     const hamburgerClick = (e) => {
       return (e.target.parentNode === hamburger || e.target === hamburger) ? true : false
@@ -267,10 +268,9 @@
         navOptions.classList.remove('active');
       } else if (hamburgerClick(e)) {
         navOptions.classList.toggle('active');
+      } else if (e.target.classList.contains("js-theme-btn")) {
+        applyTheme(e.target);
       }
-      // } else if (e.target.classList.contains("js-theme-btn")) {
-      //   applyTheme(e.target);
-      // }
     })
 
   </script>
