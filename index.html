@@ -10,24 +10,24 @@
   <link rel="stylesheet" href="./scss/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body class="theme--purple">
+<body class="theme--purple" id="top">
   <header>
     <div class="nav-container wide">
       <div class="logo-block">
-        <a href="#home">
+        <a href="#top">
           <img class="logo js-nav-link" src="assets/sm-site-img.png" alt="Letters S M"/>
         </a>
         <div class="theme-selector">
-          <button class="btn btn--circle btn--purple"></button>
-          <button class="btn btn--circle btn--orange"></button>
-          <button class="btn btn--circle btn--teal"></button>
+          <button aria-label="purple" class="btn btn--circle btn--purple js-theme-btn"></button>
+          <button aria-label="orange" class="btn btn--circle btn--orange js-theme-btn"></button>
+          <button aria-label="teal" class="btn btn--circle btn--teal js-theme-btn"></button>
         </div>
       </div>
 
       <nav class="nav">
         <ul id="js-nav" class="nav__items" >
           <li class="nav__item">
-            <a class="js-nav-link" href="#about">About</a>
+            <a id="js-nav-first" class="js-nav-link" href="#about">About</a>
           </li>
           <li class="nav__item">
             <a class="js-nav-link" href="#projects">Projects</a>
@@ -40,7 +40,7 @@
           </li>
         </ul>
       </nav>
-      <span class="hamburger" id="js-hamburger">
+      <span class="hamburger" id="js-hamburger" tabindex="0" aria-label="Toggle navigation menu">
         <i class="fa fa-bars"></i>
       </span>
     </div>
@@ -238,26 +238,39 @@
     <div class="link-block width-main">
       <a class="link-block__item" href="https://github.com/staceymck/portfolio">GitHub Repo</a>
       <span class="link-block__divider">|</span>
-      <a class="link-block__item" href="#home">Home</a>
+      <a class="link-block__item" href="#top">Home</a>
     </div>
   </footer>
   
   <script>
     const navOptions = document.getElementById('js-nav');
-    const navBar = document.querySelector('header')
+    const navBar = document.querySelector('header');
     const hamburger = document.getElementById('js-hamburger');
 
-    //hide menu after link clicked
+    // const applyTheme = (target) => {
+    //   console.log(target)
+    // }
+
     const hamburgerClick = (e) => {
       return (e.target.parentNode === hamburger || e.target === hamburger) ? true : false
     }
+
+    hamburger.addEventListener('keyup', (e) => {
+      if (e.keyCode === 13) {
+        navOptions.classList.toggle('active');
+        document.getElementById("js-nav-first").focus();
+      }
+    })
 
     window.addEventListener('click', (e) => {
       if (e.target.classList.contains("js-nav-link") || !navBar.contains(e.target)) {
         navOptions.classList.remove('active');
       } else if (hamburgerClick(e)) {
-        navOptions.classList.toggle('active')
+        navOptions.classList.toggle('active');
       }
+      // } else if (e.target.classList.contains("js-theme-btn")) {
+      //   applyTheme(e.target);
+      // }
     })
 
   </script>
