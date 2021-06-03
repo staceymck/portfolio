@@ -1,0 +1,17 @@
+@import '../themes/_color-themes';
+
+.social-block {
+  padding: 1rem 0;
+
+  .social-block__icon {
+    font-size: 2rem;
+    padding-right: 1rem;
+    @include themify($themes) {
+      color: themed('primary-color');
+    }
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
