@@ -23,8 +23,16 @@ footer {
 @include medium-screens {
   footer {
     p, .link-block  {
-      width: 25%;
+      width: 50%;
       margin: 0 auto;
+    }
+  } 
+}  
+
+@include large-screens {
+  footer {
+    p {
+      width: 30%;
     }
   } 
 }  
